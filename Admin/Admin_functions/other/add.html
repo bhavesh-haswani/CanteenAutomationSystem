@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title>ADD MENU</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <form method="POST" Action="saveitem.php">
+
+        <div class="form-row align-items-center">
+
+            <div class="col-auto my-1">
+                <label style="width:300px; height230px;" for="exampleInputName">Select Food category </label>
+                <select class="custom-select mr-sm-2" name="Category">
+                    <option selected>Choose...</option>
+                    <?php
+                              $con=mysqli_connect("127.0.0.1:3308","root","","canteen_db");
+                              $qry="select category, catdesc from menucategory";
+                              $run=mysqli_query($con,$qry);
+                              while ($rows=mysqli_fetch_array($run))
+                              {
+             
+                                          echo "<option value=".$rows['category'].">".$rows['catdesc']."</option>";
+             
+                              }
+                        ?>
+
+                </select>
+
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="exampleInputName">Add Food Item </label>
+            <input style="width:300px; height230px;" type="string" class="form-control" id="ItemName" name="ItemName"
+                placeholder="New Food Item">
+
+        </div>
+
+
+        <div class="form-group">
+            <label for="exampleInputName">Price</label>
+            <input style="width:300px; height230px;" type="string" class="form-control" id="Price" name="Price"
+                placeholder="Price">
+
+        </div>
+
+
+        <div class="form-group">
+            <label for="exampleInputName">Discount</label>
+            <input style="width:300px; height230px;" type="string" class="form-control" id="Discount" name="Discount"
+                placeholder="Discount">
+        </div>
+
+
+        <div class="form-group">
+            <label for="exampleInputName">Upload Item Image</label>
+            <input type="file" name="fileToUpload" id="fileToUpload">
+
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</body>
+
+</html>

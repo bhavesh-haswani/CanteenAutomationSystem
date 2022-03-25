@@ -1,0 +1,252 @@
+echo "<script type='text/javascript'>
+                window.location = '".$_SERVER['HTTP_REFERER']."';
+                </script>";
+
+echo "<script type='text/javascript'>alert('Incorrect Username or Password! Try Again!');
+                url = '$url';
+                window.location='url';
+                </script>";
+
+
+--- Master Piece ---
+echo "<script type='text/javascript'>alert('Incorrect Username or Password! Try Again!');
+                location='../Signinout/login.php';
+                </script>";
+
+--display admin name welcoming him-- currently not working
+?>
+if($name==""||$password==""){}  // it will be validated under script in adminlogin.php
+        else{
+            $s="Select * from admin where username= '$name'  && password='$password'";
+            $result=mysqli_query($conn,$s);
+            $num=mysqli_num_rows($result);
+            if ($num == 1){
+                $_SESSION['username']=$name;
+                                
+
+		<html><p id="demo"></p></html>
+                <script>var a_name = <?php echo $name ?>;
+                document.getElementById("demo").innerHTML = a_name;                
+                var str1= "Welcome";
+                var res = str1.concat(a_name);
+                alert(document.write(res));
+                step-x1
+                </script>
+                stepx
+                <?php
+                /*echo "<script>alert('WELCOME "a_name"');
+                    location='../Admin/admin.php';
+                    </script>";*/
+                // header('location:../Admin/admin.php');
+            }
+
+-------------------
+style="margin-left: 100%; margin-top:50%;"
+style="margin-left: 50%;"
+class="custom-select mr-sm-2"
+style="margin-left: 25%;"
+
+<label style="margin-left: 50%; margin-top:50%;" for="InputName">Select Food category </label>
+<select style="margin-left: 50% ;" class="custom-select mr-sm-2" name="Category">
+----------------
+   /*while($row1=mysqli_fetch_array($z))
+    {
+        echo "<td>";
+        echo $row["Orderid"];
+        echo "</td>";
+        echo "<td>";
+        echo $row["Orderid"];
+        echo "</td>";
+        echo "<td>";
+        echo $row["Orderid"];
+        echo "</td>";
+        echo "<td>";
+        echo $row["Orderid"];
+        echo "</td>";
+    }
+    ?>
+-----------------------------
+<tr>NO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $NOQ ?></tr><br>
+        <tr>Order ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $OID ?></tr><br>
+        <tr>Item ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $ITID ?></tr><br>
+        <tr>Quantity Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $QTY ?></tr><br>
+        <tr>Amount Paid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $AMT ?></tr><br>
+        <tr>Discount Discount&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $DIS ?></tr><br><?php
+--------------------------------------
+<html>
+
+<head>
+    <title>ADD MENU</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <form method="POST" action="saveitem.php" enctype="multipart/form-data">
+        <center>
+            <div class="form-row align-items-center">            
+                <div class="col-auto my-1">
+                    <div class="form-group">
+                        <label  for="InputName">Select Food category </label>
+                        <select  class="custom-select mr-sm-2" name="Category">
+                            <option style="margin-left: 25%;" selected>Choose...</option>
+                            <?php
+                                $con = mysqli_connect("127.0.0.1:3308", "root", "", "canteen_db");
+                                $qry = "select category, catdesc from menucategory";
+                                $run = mysqli_query($con, $qry);
+                                while ($rows = mysqli_fetch_array($run)) {
+
+                                    echo "<option value=" . $rows['category'] . ">" . $rows['catdesc'] . "</option>";
+                            }
+                            ?>
+                        </select>
+                    </div>
+                </div>            
+            </div>
+            </center>
+        <center>
+        <div class="form-group">
+            <label style="margin-left: 5%;  width:300px;" for="InputName">Add Food Item </label> <!-- height:230px;-->
+            <input style="margin-left: 5%;  width:300px;" type="string" class="form-control" id="ItemName" name="ItemName" placeholder="New Food Item"><!-- height:230px;-->                    
+        </div>
+        </center>
+        <center>
+        <div class="form-group">
+            <label style="margin-left: 5%;  width:300px; " for="InputName">Price</label> <!--height230px;-->
+            <input style="margin-left: 5%;  width:300px; " type="string" class="form-control" id="Price" name="Price" placeholder="Price"><!--height230px;-->            
+        </div>
+        </center>
+        <center>
+        <div class="form-group">
+            <label style="margin-left: 5%; width:300px; " for="InputName">Discount</label><!--height230px;-->
+            <input style="margin-left: 5%; width:300px; " type="string" class="form-control" id="Discount" name="Discount" placeholder="Discount"><!--height230px;-->
+        </div>
+        </center>
+        <center>
+        <button style="margin-left: 5%;" type="submit" value="Upload Image" class="btn btn-primary">Submit</button>
+        </center>
+    </form>
+
+</body>
+
+</html>
+------------------------------------------
+<?php
+$con=mysqli_connect("127.0.0.1:3308","root","","canteen_db");
+$cat=$_POST["Category"];
+$ItemName=$_POST['ItemName'];
+$Price=$_POST['Price'];
+$Dis=$_POST['Discount'];
+//$target_dir = "uploads/";
+//$target_file = $target_dir . basename($_FILES["file"]["fileToUpload"]);
+//$ItemImg = $_FILES['file']['fileToUpload'];
+//$file = fopen($ItemImg,'1','r');
+//$file = fopen($target_file,'r');
+//$file_contents = fread($file, filesize($target_file));
+//fclose($file);
+//$file_contents = addslashes($file_contents);
+
+//uploading image
+/*$ItemImg = $_FILES['file']['fileToUpload'];
+$file = fopen($ItemImg, 'r');
+$file_contents = fread($file, filesize($ItemImg));
+fclose($file);
+$file_contents = addslashes($file_contents);*/
+
+/*///////////////
+$targetDir = "uploads/";
+$fileName = basename($_FILES["file"]["name"]);
+$targetFilePath = $targetDir . $fileName;
+$fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
+//Allow certain file formats
+$allowTypes = array('jpg','png','jpeg','gif','pdf');
+
+if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
+    // Allow certain file formats
+    //$allowTypes = array('jpg','png','jpeg','gif','pdf');
+    if(in_array($fileType, $allowTypes)){
+        // Upload file to server
+        if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
+            // Insert image file name into database
+            $insert = $db->query("INSERT into images (file_name, uploaded_on) VALUES ('".$fileName."', NOW())");
+            if($insert){
+                $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
+            }else{
+                $statusMsg = "File upload failed, please try again.";
+            } 
+        }else{
+            $statusMsg = "Sorry, there was an error uploading your file.";
+        }
+    }else{
+        $statusMsg = 'Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed to upload.';
+    }
+}else{
+    $statusMsg = 'Please select a file to upload.';
+}
+*/
+// Display status message
+/*echo $statusMsg;
+?>*/
+//////////////////////////////////GEEKS FOR GEEKS////////////////////////////////////////////
+$msg = "";
+  
+  // If upload button is clicked ...
+  if (isset($_POST['upload'])) {
+  
+    $ItemImg = $_FILES["uploadfile"]["name"];
+
+    $tempname = $_FILES["uploadfile"]["tmp_name"];    
+      $folder = "img_uploads/".$filename;
+          
+//        $db = mysqli_connect("localhost", "root", "", "photos");
+  
+        // Get all the submitted data from the form
+//       $sql = "INSERT INTO image (filename) VALUES ('$filename')";
+  
+        // Execute query
+        mysqli_query($db, $sql);
+          
+        // Now let's move the uploaded image into the folder: image
+        if (move_uploaded_file($tempname, $folder))  {
+            $msg = "Image uploaded successfully";
+        }else{
+            $msg = "Failed to upload image";
+      }
+  }
+  $result = mysqli_query($db, "SELECT * FROM image");
+
+
+/////////////////////////////
+
+$qry="select max(MenuItemID) as maxid from menuitems ";
+$jd=0;
+$run=mysqli_query($con,$qry);
+while ($rows=mysqli_fetch_array($run))
+      {
+                  $jd=$rows[0];
+      }
+      
+if(isset($_POST['submit'])){
+
+    $ItemImg = $_FILES["uploadfile"]["name"];
+    $tempname = $_FILES["uploadfile"]["tmp_name"];    
+    $folder = "img_uploads/".$ItemImg;
+    if (move_uploaded_file($tempname, $folder))  {
+        $msg = "Image uploaded successfully";
+    }else{
+        $msg = "Failed to upload image";
+    }
+
+    $qry="Insert into menuitems(Category,MenuItemID,ItemName,Price,Discount,ItemImg) values ($cat,$jd+1,'$ItemName',$Price,$Dis,$ItemImg)";
+    if (mysqli_query($con,$qry)==TRUE)
+    {
+        echo '<script> alert("Menu Item Added Successful");</script>';
+        echo "<script> window.location='../admin.php';</script>";
+    }
+    else
+    {
+        echo '<script> alert("Please try again");</script>';
+        header('refresh:0;url=../admin.php');
+    }
+}
+?>

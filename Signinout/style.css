@@ -1,0 +1,32 @@
+body{
+    background:linear-gradient (rgba(0,0,050,0.5),rgba(0,0,50,0.5));
+    background-size:cover;
+    background-position:center;
+
+}
+.login{
+    max-width:600px;
+    float:none;
+    margin:auto auto;
+}
+.login-left{
+    background:rgba(190,190,200,0.5);
+    padding:30px;
+	
+    margin-left: 20%;
+    font-size: 50px;
+	
+}
+.login-right{
+    background:rgba(190,190,200,0.5);
+    padding:30px;
+    margin-top: 60px;
+    margin-left: 20%;
+    font-size: 50px;
+  
+
+}
+.form-control{
+    background-color: transparent !important;
+	color:yellow;
+}
